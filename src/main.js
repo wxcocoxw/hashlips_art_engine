@@ -167,36 +167,6 @@ const addMetadata = (_dna, _edition) => {
         creators: solanaMetadata.creators,
       },
     };
-  };
-  /////   Added Algorand Metadata for ARC0069    /////
-  if (network == NETWORK.algo) {
-    tempMetadata = {
-      name: tempMetadata.name,
-      symbol: solanaMetadata.symbol,
-      description: tempMetadata.description,
-      seller_fee_basis_points: solanaMetadata.seller_fee_basis_points,
-      image: `${_edition}.png`,
-      external_url: solanaMetadata.external_url,
-      edition: _edition,
-      ...extraMetadata,
-      attributes: tempMetadata.attributes,
-      properties: {
-        files: [
-          {
-            uri: `${_edition}.png`,
-            type: "image/png",
-          },
-        ],
-      standard: "arc69",
-      description: " ",
-      external_url: solanaMetadata.external_url,
-      mime_type: image/png,
-      properties: {
-        base: "groovy",
-        vibes: "Funky",
-        overall: "good stuff",
-      },
-    },
   }
   metadataList.push(tempMetadata);
   attributesList = [];
@@ -460,6 +430,5 @@ const startCreating = async () => {
   writeMetaData(JSON.stringify(metadataList, null, 2));
 };
 
-module.exports = { startCreating, buildSetup, getElements }
+module.exports = { startCreating, buildSetup, getElements };
 
-}

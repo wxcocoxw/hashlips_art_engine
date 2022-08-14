@@ -11,11 +11,11 @@ const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
   symbol: "SOCKBT",
-  seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  seller_fee_basis_points: 50, // Define how much % you want from secondary market sales 1000 = 10%
+  external_url: "https://www.sockbotnft.com",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "SC5KS4RNGJXC5KMAUXOLZONS22I6AV2YW2WIF7AJX63AJKNPVSBKMYPSEM",
       share: 100,
     },
   ],
@@ -24,7 +24,7 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 2222,
+    growEditionSizeTo: 50,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
