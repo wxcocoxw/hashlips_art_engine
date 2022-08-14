@@ -5,12 +5,12 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "SockBot";
+const description = "An Algorand Collection of 2,222 Premium 3D Rendered NFTs.";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
-  symbol: "YC",
+  symbol: "SOCKBT",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
@@ -28,12 +28,13 @@ const layerConfigurations = [
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
+      { name: "Magnets" },
       { name: "Face" },
       { name: "Head" },
       { name: "Legs" },
       { name: "HandR" },
       { name: "HandL" },
-      { name: "Magnets" },
+      
     ],
   },
 ];
@@ -43,8 +44,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1500,
+  height: 1500,
   smoothing: false,
 };
 
@@ -73,7 +74,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
